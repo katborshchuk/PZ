@@ -28,6 +28,11 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "Level Events")
+		FCharacterEventDelegate_OnStartAcumulatorCharging OnStartAcumulatorCharging;
+
+	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "Level Events")
+		FCharacterEventDelegate_OnEndAcumulatorCharging OnEndAcumulatorCharging;
 		
 	
 };
