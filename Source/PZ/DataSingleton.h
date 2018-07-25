@@ -1,16 +1,29 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 #pragma once
 
-#include "GlobalEventHandler.h"
+#include "CoreMinimal.h"
+#include "Components/ActorComponent.h"
+#include "GameFramework/Actor.h"
+#include "HelpComponent.h"
 #include "DataSingleton.generated.h"
+//
 
 UCLASS(Blueprintable, BlueprintType)
-class UDataSingleton : public UObject
+class PZ_API  UDataSingleton : public UObject
 {
 	GENERATED_BODY()
 public:
 	UDataSingleton(const FObjectInitializer& ObjectInitializer);
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Solus Data Singleton")
-	UGlobalEventHandler* GlobalEventHandler;
+	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "Level Events")
+		FCharacterEventDelegate_OnStartAcumulatorCharging OnStartAcumulatorCharging;
+
+	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "Level Events")
+		FCharacterEventDelegate_OnEndAcumulatorCharging OnEndAcumulatorCharging;
+
+	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "Level Events")
+		FCharacterEventDelegate_OnStartAcumulatorCharging OnStartGasCharging;
+
+	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "Level Events")
+		FCharacterEventDelegate_OnEndAcumulatorCharging OnEndGasCharging;
 };

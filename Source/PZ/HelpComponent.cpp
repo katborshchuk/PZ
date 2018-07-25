@@ -1,11 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "PZ.h"
-#include "GlobalEventHandler.h"
+#include "HelpComponent.h"
 
 
 // Sets default values for this component's properties
-UGlobalEventHandler::UGlobalEventHandler()
+UHelpComponent::UHelpComponent()
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
@@ -16,7 +16,7 @@ UGlobalEventHandler::UGlobalEventHandler()
 
 
 // Called when the game starts
-void UGlobalEventHandler::BeginPlay()
+void UHelpComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
@@ -26,7 +26,7 @@ void UGlobalEventHandler::BeginPlay()
 
 
 // Called every frame
-void UGlobalEventHandler::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+void UHelpComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 

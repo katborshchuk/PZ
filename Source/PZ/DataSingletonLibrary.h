@@ -22,3 +22,6 @@ public:
 		static UDataSingleton* GetData(bool& IsValid);
 	
 };
+
+
+
