@@ -15,6 +15,8 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCharacterEventDelegate_OnStartAcumu
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCharacterEventDelegate_OnEndAcumulatorCharging, bool, result);
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FCharacterEventDelegate_EnvironmentComponentChanged, UEnvironmentComonent*, environmentComonent, bool, isBiggerMax);
+
 UCLASS(meta = (BlueprintSpawnableComponent), Category = "Global Events")
 class UHelpComponent : public UActorComponent
 {

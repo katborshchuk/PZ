@@ -5,6 +5,7 @@
 #include "Components/ActorComponent.h"
 #include "GameFramework/Actor.h"
 #include "HelpComponent.h"
+#include "EnvironmentComonent.h"
 #include "DataSingleton.generated.h"
 //
 
@@ -26,4 +27,8 @@ public:
 
 	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "Level Events")
 		FCharacterEventDelegate_OnEndAcumulatorCharging OnEndGasCharging;
+
+	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "Level Events")
+		FCharacterEventDelegate_EnvironmentComponentChanged OnValueCriticalChanged;
+
 };
