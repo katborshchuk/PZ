@@ -17,6 +17,8 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCharacterEventDelegate_OnEndAcumula
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FCharacterEventDelegate_EnvironmentComponentChanged, UEnvironmentComonent*, environmentComonent, bool, isBiggerMax);
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FCharacterEventDelegate_OpenCloseDoor, AActor*, data, bool, open);
+
 UCLASS(meta = (BlueprintSpawnableComponent), Category = "Global Events")
 class UHelpComponent : public UActorComponent
 {
@@ -25,7 +27,7 @@ class UHelpComponent : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UHelpComponent();
-
+	  
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;

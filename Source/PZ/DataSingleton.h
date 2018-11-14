@@ -31,4 +31,7 @@ public:
 	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "Level Events")
 		FCharacterEventDelegate_EnvironmentComponentChanged OnValueCriticalChanged;
 
+	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "Level Events")
+		FCharacterEventDelegate_OpenCloseDoor OnOpenCloseDoor;
+
 };
