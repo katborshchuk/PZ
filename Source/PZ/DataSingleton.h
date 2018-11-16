@@ -20,6 +20,9 @@ public:
 		FCharacterEventDelegate_OnStartAcumulatorCharging OnStartAcumulatorCharging;
 
 	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "Level Events")
+		FCharacterEventDelegate_OnStartAcumulatorCharging OnAccumulatorGriped;
+
+	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "Level Events")
 		FCharacterEventDelegate_OnEndAcumulatorCharging OnEndAcumulatorCharging;
 
 	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "Level Events")
