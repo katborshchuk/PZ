@@ -26,6 +26,9 @@ public:
 		FCharacterEventDelegate_OnEndAcumulatorCharging OnEndAcumulatorCharging;
 
 	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "Level Events")
+		FCharacterEventDelegate_OnEndAcumulatorCharging OnEndAcumulatorShelled;
+
+	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "Level Events")
 		FCharacterEventDelegate_OnStartAcumulatorCharging OnStartGasCharging;
 
 	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "Level Events")
